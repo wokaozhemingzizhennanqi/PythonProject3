@@ -1,0 +1,9 @@
+/.venv/
+/.venv36/
+/.venv38/
+/.vscode/
+/bert-base-uncased/
+/bert-base-uncased2/
+/dataset/
+/output/
+/torch1.1_env/
