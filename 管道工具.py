@@ -54,15 +54,21 @@ from transformers import pipeline
 # print(r)
 
 
+print("Start")
 from transformers import AutoTokenizer,AutoModelForSeq2SeqLM
 
+print("Loading tokenizer")
 tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-zh-en")
+print("Loading model")
 model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-zh-en")
 
+print("Pipeline init")
 sentence='我叫拉萨，我住在伦敦'
 translater = pipeline(task='translation_zh_to_en', model=model, tokenizer=tokenizer, max_length=130)
 
+print("Translating")
 r=translater(sentence)
 print(r)
+print("Done")
 
 
